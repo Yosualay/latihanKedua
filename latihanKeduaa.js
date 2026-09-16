@@ -1,16 +1,14 @@
-const cart = [
-  { name: "Laptop", price:  1000, diskonPersen: 10 },
-  { name: "Mouse", price: 20, diskonPersen: 5 },
-  { name: "Keyboard", price: 50, diskonPersen: 0},
-];
-
-function applyDiskon (cart) {
-    const hasil = {}
-    for(const item of cart) {
-        const diskon = (item.price * item.diskonPersen) / 100;
-        hasil[item.name]=item.price - diskon;
+function linearSearch(array, target) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === target) {
+            return i;
+        }
     }
-    return hasil;
-}
-console.log(applyDiskon(cart));
 
+    return -1;
+}
+
+const numbers = [10, 20, 30, 40, 50];
+
+console.log(linearSearch(numbers, 30));
+console.log(linearSearch(numbers, 99));
